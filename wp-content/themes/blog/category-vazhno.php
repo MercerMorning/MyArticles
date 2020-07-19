@@ -7,16 +7,17 @@
                 <?php if( have_posts() ) : ?>
                     <?php while ( have_posts() ) : the_post(); ?>
                         <div class="bloger-grid">
-                            <div class="blog-img">
-                                <?php the_post_thumbnail( 'mysize' ) ?>
-                            </div>
+                            <?php if ( has_post_thumbnail() ) : ?>
+                                <div class="blog-img">
+                                    <?php the_post_thumbnail( 'thumbnail' ) ?>
+                                </div>
+                            <?php endif ;?>
                             <div class="bloger-content">
-                                <h5><a href="single.php"><?php the_excerpt(); ?></a></h5>
-                                <p><?php the_excerpt(); ?></p>
+                                <p><?php the_content(); ?></p>
                                 <ul>
                                     <li><a href="#"><?php the_title();?></a></li>
                                     <li><a href="#">: <?php the_time('d.m.Y');?></a></li>
-                                    <li><a href="<?php the_permalink();?>"><span>подробнее</span></a></li>
+                                    <li style="display: none"></li>
                                 </ul>
                             </div>
                             <div class="clear"> </div>
@@ -39,17 +40,17 @@
 
         } ?>
 
-<!--        <ul class="dc_pagination dc_paginationA dc_paginationA03">-->
-<!--            <li><a href="#" class="first">First</a></li>-->
-<!--            <li><a href="#" class="previous">Previous</a></li>-->
-<!--            <li><a href="#">1</a></li>-->
-<!--            <li><a href="#">2</a></li>-->
-<!--            <li><a href="#" class="current">3</a></li>-->
-<!--            <li><a href="#">4</a></li>-->
-<!--            <li><a href="#">5</a></li>-->
-<!--            <li><a href="#" class="next">Next</a></li>-->
-<!--            <li><a href="#" class="last">Last</a></li>-->
-<!--        </ul>-->
+        <!--        <ul class="dc_pagination dc_paginationA dc_paginationA03">-->
+        <!--            <li><a href="#" class="first">First</a></li>-->
+        <!--            <li><a href="#" class="previous">Previous</a></li>-->
+        <!--            <li><a href="#">1</a></li>-->
+        <!--            <li><a href="#">2</a></li>-->
+        <!--            <li><a href="#" class="current">3</a></li>-->
+        <!--            <li><a href="#">4</a></li>-->
+        <!--            <li><a href="#">5</a></li>-->
+        <!--            <li><a href="#" class="next">Next</a></li>-->
+        <!--            <li><a href="#" class="last">Last</a></li>-->
+        <!--        </ul>-->
         <!-- DC Pagination:A3 End -->
         <div class="clear"> </div>
         <!-- DC Pagination:C9 End -->

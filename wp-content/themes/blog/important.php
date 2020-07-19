@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Важно
+*/
+?>
+<?php get_header() ?>
     <div class="wrap">
         <div class="about">
             <?php dynamic_sidebar('main_side'); ?>
@@ -56,3 +61,4 @@
     </div>
     <div class="clear"> </div>
 <?php get_footer(); ?>
+?>

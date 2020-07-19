@@ -1,8 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(65709457, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/65709457" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Problog Website Template | Home :: W3layouts</title>
+    <meta name="yandex-verification" content="077261c7d5f428c9" />
+    <title>NV PROblog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href='//fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
@@ -26,14 +41,18 @@
     <div class="wrap">
         <?php
         wp_nav_menu( array(
-            'theme_location' => 'head_menu',
+            'theme_location' => 'header_menu',
             'container' => false,
         ))
         ?>
         <div class="search-bar">
             <ul>
-                <li><input type="text"></li>
-                <li><form><input type="submit" value="" /></form></li>
+                <li>
+                    <form action="<?php echo site_url() ?>">
+                        <input type="text" name="s">
+                        <input type="submit" value="<?php the_search_query();?>" />
+                    </form>
+                </li>
             </ul>
         </div>
     </div>

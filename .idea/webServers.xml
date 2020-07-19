@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="18bf8152-13f5-478e-b1f5-ca1c6e0f5709" name="blog" url="http://server.microweb.info">
+        <fileTransfer rootFolder="/domains/xn--90aenigcndcqr5k.xn--p1acf/public_html" host="server.microweb.info" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
